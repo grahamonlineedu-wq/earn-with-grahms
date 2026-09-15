@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Wallet, CheckCircle, Clock, Send, ArrowUpRight, DollarSign, ListTodo, RefreshCw } from 'lucide-react';
+import { ListTodo, RefreshCw } from 'lucide-react';
 import { api } from './api';
 
 interface Task {
@@ -11,7 +11,6 @@ interface Task {
 }
 
 export const Dashboard: React.FC = () => {
-  const [balanceCents, setBalanceCents] = useState<number>(0);
   const [tasks, setTasks] = useState<Task[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [selectedTask, setSelectedTask] = useState<Task | null>(null);
@@ -159,4 +158,3 @@ export const Dashboard: React.FC = () => {
     </div>
   );
 };
-
